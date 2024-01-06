@@ -1,16 +1,17 @@
-import { FlatList, Text, View } from "react-native";
+import { FlatList } from "react-native";
 import { CONTACTS } from "../data/contactsData";
 import Chat from "../components/Chat";
 
-function Chats() {
+function Chats({ navigation }) {
   const contacts = CONTACTS;
-
-  console.log(contacts);
 
   function renderList(itemData) {
     const data = itemData.item;
+    function handlePress() {
+      navigation.navigate("ChatWall", { message: data.message });
+    }
 
-    return <Chat data={data} />;
+    return <Chat data={data} onPress={handlePress} id={data.id} />;
   }
 
   return (

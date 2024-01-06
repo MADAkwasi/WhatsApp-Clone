@@ -1,23 +1,30 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
-function Chat({ data }) {
-  const { firstName, lastName, picture, messages } = data;
+function Chat({ data, onPress }) {
+  const { firstName, lastName, picture, messages, time } = data;
 
   return (
-    <View style={styles.container}>
-      <Image style={styles.img} source={{ uri: picture }} />
-      <View>
-        <View style={styles.nameCont}>
-          <Text style={styles.name}>{firstName}</Text>
-          <Text style={styles.name}>{lastName}</Text>
-        </View>
-        <View style={styles.msgCont}>
-          <Text numberOfLines={1} ellipsizeMode="tail">
-            {messages}
-          </Text>
+    <Pressable onPress={onPress} android_ripple={{ color: "#ddd" }}>
+      <View style={styles.container}>
+        <Image style={styles.img} source={{ uri: picture }} />
+        <View style={styles.chatCont}>
+          <View style={styles.infoCont}>
+            <View style={styles.nameCont}>
+              <Text style={styles.name}>{firstName}</Text>
+              <Text style={styles.name}>{lastName}</Text>
+            </View>
+            <View>
+              <Text style={styles.time}>{time}</Text>
+            </View>
+          </View>
+          <View>
+            <Text numberOfLines={1} ellipsizeMode="tail">
+              {messages}
+            </Text>
+          </View>
         </View>
       </View>
-    </View>
+    </Pressable>
   );
 }
 
@@ -38,11 +45,20 @@ const styles = StyleSheet.create({
   nameCont: {
     flexDirection: "row",
   },
+  infoCont: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
   name: {
     marginHorizontal: 3,
     fontSize: 15,
   },
-  msgCont: {
-    width: "85%",
+  time: {
+    // marginHorizontal: 3,
+    fontSize: 12,
+  },
+  chatCont: {
+    width: "72%",
+    gap: 2,
   },
 });
