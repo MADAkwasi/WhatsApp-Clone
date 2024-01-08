@@ -11,7 +11,7 @@ function Chat({ data, onPress }) {
           <View style={styles.infoCont}>
             <View style={styles.nameCont}>
               <Text style={styles.name}>{firstName}</Text>
-              <Text style={styles.name}>{lastName}</Text>
+              {/* <Text style={styles.name}>{lastName}</Text> */}
             </View>
             <View>
               <Text style={styles.time}>{time}</Text>

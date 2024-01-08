@@ -8,7 +8,7 @@ function Chats({ navigation }) {
   function renderList(itemData) {
     const data = itemData.item;
     function handlePress() {
-      navigation.navigate("ChatWall", { message: data.message });
+      navigation.navigate("ChatWall", { data });
     }
 
     return <Chat data={data} onPress={handlePress} id={data.id} />;
