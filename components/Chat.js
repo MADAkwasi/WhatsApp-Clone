@@ -6,7 +6,11 @@ function Chat({ data, onPress }) {
   return (
     <Pressable onPress={onPress} android_ripple={{ color: "#ddd" }}>
       <View style={styles.container}>
-        <Image style={styles.img} source={{ uri: picture }} />
+        <Image
+          style={styles.img}
+          resizeMode="contain"
+          source={{ uri: picture }}
+        />
         <View style={styles.chatCont}>
           <View style={styles.infoCont}>
             <View style={styles.nameCont}>

@@ -4,12 +4,20 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
 
-function HeaderTitle({ firstName, image }) {
+function HeaderTitle({ firstName, image, onPress }) {
   return (
     <View style={styles.cont}>
       <View style={styles.groupLeft}>
-        <Image style={styles.img} source={{ uri: image }} />
-        <Pressable style={styles.btn} android_ripple={{ color: "#ddd" }}>
+        <Image
+          style={styles.img}
+          resizeMode="contain"
+          source={{ uri: image }}
+        />
+        <Pressable
+          onPress={onPress}
+          style={styles.btn}
+          android_ripple={{ color: "#ddd" }}
+        >
           <Text style={styles.txt}>{firstName}</Text>
         </Pressable>
       </View>

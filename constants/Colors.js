@@ -3,6 +3,8 @@ export const Colors = {
   text: "#000000",
   primary: "#075E54",
   secondary: "#128c7e",
+  sentBubble: "#dcf8c6",
+  seen: "#34b7f1",
 
   // darkMode: {
   //   background: "#212121",

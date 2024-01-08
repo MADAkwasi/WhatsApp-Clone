@@ -5,19 +5,23 @@ import ChatWall from "./screens/ChatWall";
 import HeaderLeft from "./components/HeaderLeft";
 import { Colors } from "./constants/Colors";
 import { StatusBar } from "expo-status-bar";
+import Overview from "./screens/Overview";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <>
-      <StatusBar />
+      {/* <StatusBar /> */}
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
             headerShown: false,
             headerStyle: { backgroundColor: Colors.secondary },
             headerTintColor: Colors.background,
+            statusBarStyle: "auto",
+            statusBarTranslucent: true,
+            statusBarColor: Colors.secondary,
           }}
         >
           <Stack.Screen name="Tab" component={TabBar} />
@@ -29,6 +33,21 @@ export default function App() {
               animation: "slide_from_right",
               animationTypeForReplace: "push",
               headerBackVisible: true,
+            }}
+          />
+          <Stack.Screen
+            name="Overview"
+            component={Overview}
+            options={{
+              headerShown: true,
+              headerTitle: "",
+              animationTypeForReplace: "push",
+              animation: "fade",
+              headerTransparent: true,
+              headerStyle: { backgroundColor: "transparent" },
+              statusBarStyle: "dark",
+              statusBarColor: "transparent",
+              statusBarTranslucent: false,
             }}
           />
         </Stack.Navigator>
