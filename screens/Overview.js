@@ -5,6 +5,7 @@ import Media from "../components/Media";
 import Action from "../components/Action";
 import Security from "../components/Security";
 import Groups from "../components/Groups";
+import DangerActions from "../components/DangerActions";
 
 function Overview({ route }) {
   const params = route.params.data;
@@ -19,6 +20,7 @@ function Overview({ route }) {
         <Action />
         <Security />
         <Groups firstName={firstName} />
+        <DangerActions firstName={firstName} />
       </View>
     </ScrollView>
   );

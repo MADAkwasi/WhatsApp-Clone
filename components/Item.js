@@ -1,17 +1,17 @@
 import { StyleSheet, Switch, Text, View } from "react-native";
 
-function Item({ btn = false, des, details, children }) {
+function Item({ btn = false, des, details, children, style }) {
   return (
     <View style={[styles.cont, btn && { paddingVertical: 4 }]}>
       <View style={styles.details}>
         {children}
         {details ? (
           <View>
-            <Text style={styles.des}>{des}</Text>
+            <Text style={[styles.des, style]}>{des}</Text>
             <Text style={styles.det}>{details}</Text>
           </View>
         ) : (
-          <Text style={styles.des}>{des}</Text>
+          <Text style={[styles.des, style]}>{des}</Text>
         )}
       </View>
       {btn && <Switch />}

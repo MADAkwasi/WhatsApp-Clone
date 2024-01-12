@@ -1,4 +1,4 @@
-import { StyleSheet, TextInput, View } from "react-native";
+import { Button, StyleSheet, TextInput, View } from "react-native";
 import RoundBtn from "./RoundBtn";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Colors } from "../constants/Colors";
@@ -7,6 +7,8 @@ import { Entypo } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
+import { Audio } from "expo-av";
+import { useEffect } from "react";
 
 function MessageInput({
   setMessages,
@@ -15,10 +17,67 @@ function MessageInput({
   messages,
   onCamera,
   sendTxt,
-  sendAud,
 }) {
+  const [permissionResponse, requestPermissions] = Audio.usePermissions();
+  const [recording, setRecording] = useState();
+  const [isRecording, setIsRecording] = useState(false);
+  const [uri, setUri] = useState();
+  const [sound, setSound] = useState();
+
+  async function startRecording() {
+    try {
+      setIsRecording(true);
+      if (permissionResponse.status !== "granted") {
+        await requestPermissions();
+      }
+    } catch (err) {
+      console.log(err);
+    }
+
+    await Audio.setAudioModeAsync({
+      allowsRecordingIOS: true,
+      playsInSilentModeIOS: true,
+    });
+
+    const { recording } = await Audio.Recording.createAsync(
+      Audio.RecordingOptionsPresets.HIGH_QUALITY
+    );
+    setRecording(recording);
+  }
+
+  async function stopRecording() {
+    setIsRecording(false);
+    setRecording(undefined);
+    await recording.stopAndUnloadAsync();
+    await Audio.setAudioModeAsync({
+      allowsRecordingIOS: false,
+    });
+    setUri(recording.getURI());
+  }
+
+  console.log(uri);
+
+  async function playSound() {
+    const { sound } = await Audio.Sound.createAsync({ uri });
+    setSound(sound);
+
+    await sound.playAsync();
+  }
+
+  useEffect(() => {
+    return sound
+      ? () => {
+          console.log("Unloading Sound");
+          sound.unloadAsync();
+        }
+      : undefined;
+  }, [sound]);
+
   return (
     <View style={styles.inputCont}>
+      <View style={{ top: -200, left: 200 }}>
+        <Button onPress={playSound} title={sound ? `playing...` : `play`} />
+      </View>
       <RoundBtn style={styles.emoji} ripple={false}>
         <FontAwesome5 name="laugh" size={24} color="#c7c7c7" />
       </RoundBtn>
@@ -43,13 +102,17 @@ function MessageInput({
       )}
       <RoundBtn
         style={styles.vn}
-        onPress={msg ? sendTxt : sendAud}
+        onPress={msg ? sendTxt : isRecording ? stopRecording : startRecording}
         color={Colors.secondary}
       >
         {msg ? (
           <Ionicons name="send-sharp" size={24} color="#fff" />
         ) : (
-          <MaterialCommunityIcons name="microphone" size={26} color="#fff" />
+          <MaterialCommunityIcons
+            name="microphone"
+            size={26}
+            color={isRecording ? "#f70a0a" : "#fff"}
+          />
         )}
       </RoundBtn>
     </View>

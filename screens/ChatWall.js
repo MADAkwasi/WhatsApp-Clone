@@ -50,6 +50,7 @@ function ChatWall({ navigation, route }) {
       style={styles.background}
       source={require("../assets/chat_background.jpg")}
     >
+    
       <MessageInput
         sendTxt={sendTxt}
         sendAud={sendAud}
