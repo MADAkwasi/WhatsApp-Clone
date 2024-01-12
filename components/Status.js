@@ -15,7 +15,7 @@ export default Status;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: Colors.background,
-    elevation: 4,
+    elevation: 2,
     paddingVertical: 20,
     gap: 5,
   },

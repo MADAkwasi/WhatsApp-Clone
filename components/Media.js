@@ -37,7 +37,7 @@ export default Media;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: Colors.background,
-    elevation: 4,
+    elevation: 2,
     gap: 7,
     paddingVertical: 10,
   },

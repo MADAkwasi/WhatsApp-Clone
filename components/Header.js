@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     gap: 7,
     paddingTop: 7,
     marginTop: -3,
-    elevation: 4,
+    elevation: 2,
     backgroundColor: Colors.background,
   },
   name: {

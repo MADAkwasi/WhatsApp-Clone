@@ -7,5 +7,5 @@ function File({ data }) {
 export default File;
 
 const styles = StyleSheet.create({
-  img: { height: 110, width: 110, borderRadius: 10, marginHorizontal: 5 },
+  img: { height: 100, width: 100, borderRadius: 10, marginHorizontal: 5 },
 });
