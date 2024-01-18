@@ -1,7 +1,7 @@
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 function Chat({ data, onPress }) {
-  const { firstName, lastName, picture, messages, time } = data;
+  const { firstName, picture, messages, time } = data;
 
   return (
     <Pressable onPress={onPress} android_ripple={{ color: "#ddd" }}>
@@ -15,7 +15,6 @@ function Chat({ data, onPress }) {
           <View style={styles.infoCont}>
             <View style={styles.nameCont}>
               <Text style={styles.name}>{firstName}</Text>
-              {/* <Text style={styles.name}>{lastName}</Text> */}
             </View>
             <View>
               <Text style={styles.time}>{time}</Text>

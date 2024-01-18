@@ -1,13 +1,10 @@
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import { NavigationContainer } from "@react-navigation/native";
-import { StatusBar } from "expo-status-bar";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import Community from "../screens/Community";
+import Communities from "../screens/Communities";
 import Chats from "../screens/Chats";
 import Updates from "../screens/Updates";
 import Calls from "../screens/Calls";
 import { Colors } from "../constants/Colors";
-import StackScreen from "../navigators/Stack";
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -29,7 +26,7 @@ function TabBar() {
     >
       <Tab.Screen
         name="Community"
-        component={Community}
+        component={Communities}
         options={{
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons

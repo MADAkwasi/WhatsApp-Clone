@@ -55,8 +55,6 @@ function MessageInput({
     setUri(recording.getURI());
   }
 
-  console.log(uri);
-
   async function playSound() {
     const { sound } = await Audio.Sound.createAsync({ uri });
     setSound(sound);
@@ -75,9 +73,9 @@ function MessageInput({
 
   return (
     <View style={styles.inputCont}>
-      <View style={{ top: -200, left: 200 }}>
+      {/* <View style={{ top: -200, left: 200 }}>
         <Button onPress={playSound} title={sound ? `playing...` : `play`} />
-      </View>
+      </View> */}
       <RoundBtn style={styles.emoji} ripple={false}>
         <FontAwesome5 name="laugh" size={24} color="#c7c7c7" />
       </RoundBtn>

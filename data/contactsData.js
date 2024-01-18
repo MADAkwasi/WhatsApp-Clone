@@ -4,7 +4,7 @@ export const CONTACTS = [
     firstName: "Jacobo",
     lastName: "Acres",
     picture: "https://randomuser.me/api/portraits/med/men/75.jpg",
-    status: "Profound",
+    status: "🚾 🆒 🆓 🆕 🆖 🆗 🆙 🏧",
     contact: "+48-345-616-6329",
     sharedFiles: null,
     messages: "In hac habitasse platea dictumst. Etiam faucibus cursus urna.",
@@ -166,7 +166,7 @@ export const CONTACTS = [
     firstName: "Chrysa",
     lastName: "Skehan",
     picture: "https://randomuser.me/api/portraits/med/men/10.jpg",
-    status: "didactic",
+    status: " ❤️ 💔 💌 💕 💞 💓 💗 💖 💘 💝 💟 💜 💛 💚 💙",
     contact: "+82-254-385-2587",
     sharedFiles: null,
     messages:
