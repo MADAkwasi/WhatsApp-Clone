@@ -2,10 +2,9 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import CommunityHeader from "./CommunityHeader";
 import CommunityFooter from "./CommunityFooter";
 
-function Community({ data, index }) {
+function Community({ data, groups }) {
   return (
     <View>
-      {index === 0 && <CommunityHeader />}
       <View>
         <View style={styles.row}>
           <Image
@@ -17,7 +16,10 @@ function Community({ data, index }) {
           <Text style={styles.txt}>{data.community}</Text>
         </View>
       </View>
-      <CommunityFooter announcements={data.announcements} />
+      <CommunityFooter
+        announcements={data.announcements}
+        groups={data.groups}
+      />
     </View>
   );
 }
@@ -26,8 +28,8 @@ export default Community;
 
 const styles = StyleSheet.create({
   img: {
-    height: 65,
-    width: 65,
+    height: 60,
+    width: 60,
     borderRadius: 10,
   },
   row: {
