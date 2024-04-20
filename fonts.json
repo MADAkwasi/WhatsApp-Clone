@@ -1,0 +1,8 @@
+{
+  "fonts": [
+    {
+      "fontFamily": "OpenSans",
+      "fontFiles": ["OpenSans-Regular.ttf"]
+    }
+  ]
+}

@@ -1,12 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
-function ViewMore() {
+function ViewMore(onPress) {
   return (
-    <View style={styles.row}>
-      <AntDesign name="right" size={22} color="#737373" />
-      <Text style={styles.txt}>View all</Text>
-    </View>
+    <Pressable onPress={onPress}>
+      <View style={styles.row}>
+        <AntDesign name="right" size={22} color="#737373" />
+        <Text style={styles.txt}>View all</Text>
+      </View>
+    </Pressable>
   );
 }
 

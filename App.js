@@ -2,15 +2,25 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import TabBar from "./navigators/TapBar";
 import ChatWall from "./screens/ChatWall";
-import HeaderLeft from "./components/HeaderLeft";
 import { Colors } from "./constants/Colors";
-import { StatusBar } from "expo-status-bar";
 import Overview from "./screens/Overview";
 import CommunityChat from "./screens/CommuntiyChat";
+import { useFonts } from "expo-font";
+import { Text } from "react-native";
+import CommunityInfo from "./screens/CommunityInfo";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    OpenSans: require("./assets/fonts/OpenSans-Regular.ttf"),
+    OpenSansBold: require("./assets/fonts/OpenSans-Bold.ttf"),
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
     <>
       {/* <StatusBar /> */}
@@ -62,6 +72,7 @@ export default function App() {
               tabBarStyle: { backgroundColor: "red" },
             }}
           />
+          <Stack.Screen name="Community Info" component={CommunityInfo} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

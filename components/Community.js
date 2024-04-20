@@ -19,7 +19,8 @@ function Community({ data, onPress }) {
       <CommunityFooter
         onPress={onPress}
         announcements={data.announcements}
-        groups={data.groups}
+        groups={data.joinedGroups}
+        availableGroups={data.availableGroups}
       />
     </View>
   );

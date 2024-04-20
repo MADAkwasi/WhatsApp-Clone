@@ -1,8 +1,10 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, View } from "react-native";
 import ChatRow from "./ChatRow";
 import ViewMore from "./ViewMore";
+import { useNavigation } from "@react-navigation/native";
 
-function CommunityFooter({ announcements, groups, onPress }) {
+function CommunityFooter({ announcements, groups, availableGroups, onPress }) {
+  const navigation = useNavigation();
   const { sender, message, time } = announcements;
 
   function renderList(itemData) {
@@ -32,7 +34,11 @@ function CommunityFooter({ announcements, groups, onPress }) {
         data={groups}
         keyExtractor={(item) => item.id}
         renderItem={renderList}
-        ListFooterComponent={<ViewMore />}
+        ListFooterComponent={
+          <ViewMore
+            onPress={navigation.navigate("CommunityInfo", { availableGroups })}
+          />
+        }
       />
     </View>
   );

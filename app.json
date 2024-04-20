@@ -12,6 +12,12 @@
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": ["**/*"],
+    "fonts": {
+      "OpenSans": {
+        "regular": "./assets/fonts/OpenSans-Regular.ttf",
+        "bold": "./assets/fonts/OpenSans-Bold.ttf"
+      }
+    },
     "ios": {
       "supportsTablet": true
     },

@@ -2,6 +2,7 @@ import { FlatList } from "react-native";
 import Community from "../components/Community";
 import { COMMUNITIES } from "../data/Communities data";
 import CommunityHeader from "../components/CommunityHeader";
+import ListSeparator from "../components/ListSeparator";
 // postgres://postgres.nlvmykxgfoyszbigqfui:[YOUR-PASSWORD]@aws-0-eu-west-2.pooler.supabase.com:6543/postgres
 
 function Communities({ navigation }) {
@@ -19,11 +20,11 @@ function Communities({ navigation }) {
 
   return (
     <FlatList
-      style={{ gap: 10 }}
       data={communities}
       keyExtractor={(item) => item.id}
       renderItem={renderList}
       ListHeaderComponent={<CommunityHeader />}
+      ItemSeparatorComponent={<ListSeparator />}
     />
   );
 }
