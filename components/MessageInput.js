@@ -7,54 +7,20 @@ import { Entypo } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
-import { Audio } from "expo-av";
 import { useEffect } from "react";
 
 function MessageInput({
-  setMessages,
+  startRecording,
   msg,
   setMsg,
-  messages,
+  isRecording,
   onCamera,
   sendTxt,
+  stopRecording,
+  uri,
+  sound,
+  setSound,
 }) {
-  const [permissionResponse, requestPermissions] = Audio.usePermissions();
-  const [recording, setRecording] = useState();
-  const [isRecording, setIsRecording] = useState(false);
-  const [uri, setUri] = useState();
-  const [sound, setSound] = useState();
-
-  async function startRecording() {
-    try {
-      setIsRecording(true);
-      if (permissionResponse.status !== "granted") {
-        await requestPermissions();
-      }
-    } catch (err) {
-      console.log(err);
-    }
-
-    await Audio.setAudioModeAsync({
-      allowsRecordingIOS: true,
-      playsInSilentModeIOS: true,
-    });
-
-    const { recording } = await Audio.Recording.createAsync(
-      Audio.RecordingOptionsPresets.HIGH_QUALITY
-    );
-    setRecording(recording);
-  }
-
-  async function stopRecording() {
-    setIsRecording(false);
-    setRecording(undefined);
-    await recording.stopAndUnloadAsync();
-    await Audio.setAudioModeAsync({
-      allowsRecordingIOS: false,
-    });
-    setUri(recording.getURI());
-  }
-
   async function playSound() {
     const { sound } = await Audio.Sound.createAsync({ uri });
     setSound(sound);
@@ -73,9 +39,6 @@ function MessageInput({
 
   return (
     <View style={styles.inputCont}>
-      {/* <View style={{ top: -200, left: 200 }}>
-        <Button onPress={playSound} title={sound ? `playing...` : `play`} />
-      </View> */}
       <RoundBtn style={styles.emoji} ripple={false}>
         <FontAwesome5 name="laugh" size={24} color="#c7c7c7" />
       </RoundBtn>

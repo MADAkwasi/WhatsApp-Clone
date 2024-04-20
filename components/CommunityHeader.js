@@ -38,9 +38,13 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: "row",
     paddingHorizontal: 12,
-    paddingVertical: 9,
+    paddingVertical: 12,
     alignItems: "center",
     gap: 10,
+    borderBottomColor: "#d9d9d9",
+    borderBottomWidth: 1,
+    marginBottom: 10,
+    backgroundColor: "blue",
   },
   plus: {
     backgroundColor: Colors.secondary,

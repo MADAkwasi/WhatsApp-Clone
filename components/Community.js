@@ -2,7 +2,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import CommunityHeader from "./CommunityHeader";
 import CommunityFooter from "./CommunityFooter";
 
-function Community({ data, groups }) {
+function Community({ data, onPress }) {
   return (
     <View>
       <View>
@@ -17,6 +17,7 @@ function Community({ data, groups }) {
         </View>
       </View>
       <CommunityFooter
+        onPress={onPress}
         announcements={data.announcements}
         groups={data.groups}
       />
@@ -34,15 +35,14 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: "row",
-    marginVertical: 15,
+    marginVertical: 12,
     alignItems: "center",
     paddingHorizontal: 12,
     gap: 10,
     borderBottomWidth: 1,
     borderBottomColor: "#d9d9d9",
-    borderTopWidth: 1,
-    borderTopColor: "#d9d9d9",
-    paddingVertical: 16,
+    paddingBottom: 14,
+    paddingTop: 6,
   },
   txt: {
     fontSize: 18,

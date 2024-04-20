@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: "100%",
     justifyContent: "flex-end",
+    marginVertical: 2.7,
   },
   time: {
     fontSize: 12,

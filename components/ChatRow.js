@@ -1,7 +1,6 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { Colors } from "../constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
-import { AntDesign } from "@expo/vector-icons";
 
 function ChatRow({
   title = "Announcements",
@@ -10,33 +9,33 @@ function ChatRow({
   sender,
   image,
   index,
+  onPress,
 }) {
   if (index && index > 1) return;
 
   return (
-    <View>
-      <View style={styles.items}>
-        {title === "Announcements" ? (
-          <View style={styles.icon}>
-            <Ionicons name="megaphone" size={27} color={Colors.secondary} />
+    <Pressable onPress={onPress} android_ripple={{ color: "#ddd" }}>
+      <View>
+        <View style={styles.items}>
+          {title === "Announcements" ? (
+            <View style={styles.icon}>
+              <Ionicons name="megaphone" size={27} color={Colors.secondary} />
+            </View>
+          ) : (
+            <Image source={{ uri: image }} style={styles.img} />
+          )}
+          <View style={styles.col}>
+            <View style={styles.rowTop}>
+              <Text style={styles.txt}>{title}</Text>
+              <Text style={styles.time}>{time}</Text>
+            </View>
+            <Text numberOfLines={1} ellipsizeMode="tail">
+              {sender}: {message}
+            </Text>
           </View>
-        ) : (
-          <Image source={{ uri: image }} style={styles.img} />
-        )}
-        <View style={styles.col}>
-          <View style={styles.rowTop}>
-            <Text style={styles.txt}>{title}</Text>
-            <Text style={styles.time}>{time}</Text>
-          </View>
-          <Text numberOfLines={1} ellipsizeMode="tail">
-            {sender}: {message}
-          </Text>
         </View>
       </View>
-      <View>
-        <AntDesign name="right" size={24} color="black" />
-      </View>
-    </View>
+    </Pressable>
   );
 }
 

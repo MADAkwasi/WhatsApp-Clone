@@ -6,6 +6,7 @@ import HeaderLeft from "./components/HeaderLeft";
 import { Colors } from "./constants/Colors";
 import { StatusBar } from "expo-status-bar";
 import Overview from "./screens/Overview";
+import CommunityChat from "./screens/CommuntiyChat";
 
 const Stack = createNativeStackNavigator();
 
@@ -48,6 +49,17 @@ export default function App() {
               statusBarStyle: "dark",
               statusBarColor: "transparent",
               statusBarTranslucent: false,
+            }}
+          />
+          <Stack.Screen
+            name="CommunityChat"
+            component={CommunityChat}
+            options={{
+              headerShown: true,
+              animation: "slide_from_right",
+              animationTypeForReplace: "push",
+              headerBackVisible: true,
+              tabBarStyle: { backgroundColor: "red" },
             }}
           />
         </Stack.Navigator>

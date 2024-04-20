@@ -4,7 +4,7 @@ import ChatWall from "../screens/ChatWall";
 
 const Stack = createNativeStackNavigator();
 
-export function StackScreen() {
+function StackScreen() {
   return (
     <Stack.Navigator
       screenOptions={{
