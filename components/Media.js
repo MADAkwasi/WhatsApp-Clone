@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
   txt: {
     color: "#737373",
     paddingHorizontal: 10,
+    fontFamily: "OpenSans",
   },
   txtCont: {
     flexDirection: "row",

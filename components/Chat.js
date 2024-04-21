@@ -21,7 +21,11 @@ function Chat({ data, onPress }) {
             </View>
           </View>
           <View>
-            <Text numberOfLines={1} ellipsizeMode="tail">
+            <Text
+              numberOfLines={1}
+              ellipsizeMode="tail"
+              style={{ fontFamily: "OpenSans" }}
+            >
               {messages}
             </Text>
           </View>
@@ -55,10 +59,12 @@ const styles = StyleSheet.create({
   name: {
     marginHorizontal: 3,
     fontSize: 15,
+    fontFamily: "OpenSans",
   },
   time: {
     // marginHorizontal: 3,
     fontSize: 12,
+    fontFamily: "OpenSans",
   },
   chatCont: {
     width: "72%",

@@ -3,7 +3,14 @@ import ChatRow from "./ChatRow";
 import ViewMore from "./ViewMore";
 import { useNavigation } from "@react-navigation/native";
 
-function CommunityFooter({ announcements, groups, availableGroups, onPress }) {
+function CommunityFooter({
+  announcements,
+  groups,
+  availableGroups,
+  onPress,
+  community,
+  image,
+}) {
   const navigation = useNavigation();
   const { sender, message, time } = announcements;
 
@@ -36,7 +43,15 @@ function CommunityFooter({ announcements, groups, availableGroups, onPress }) {
         renderItem={renderList}
         ListFooterComponent={
           <ViewMore
-            onPress={navigation.navigate("CommunityInfo", { availableGroups })}
+            onPress={() =>
+              navigation.navigate("Community Info", {
+                availableGroups,
+                community,
+                image,
+                groups,
+                announcements,
+              })
+            }
           />
         }
       />

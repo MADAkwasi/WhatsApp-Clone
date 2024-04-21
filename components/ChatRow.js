@@ -29,8 +29,17 @@ function ChatRow({
               <Text style={styles.txt}>{title}</Text>
               <Text style={styles.time}>{time}</Text>
             </View>
-            <Text numberOfLines={1} ellipsizeMode="tail">
-              {sender}: {message}
+
+            <Text
+              numberOfLines={1}
+              ellipsizeMode="tail"
+              style={
+                sender
+                  ? { fontFamily: "OpenSans" }
+                  : { fontFamily: "OpenSans", color: "#737373" }
+              }
+            >
+              {sender ? `${sender}: ${message}` : `Request to join`}
             </Text>
           </View>
         </View>
@@ -58,6 +67,7 @@ const styles = StyleSheet.create({
   },
   txt: {
     fontSize: 17,
+    fontFamily: "OpenSans",
   },
   rowTop: {
     flexDirection: "row",
@@ -70,6 +80,7 @@ const styles = StyleSheet.create({
   },
   time: {
     fontSize: 12,
+    fontFamily: "OpenSans",
   },
   img: {
     height: 40,

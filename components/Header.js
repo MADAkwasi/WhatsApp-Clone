@@ -51,10 +51,12 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 25,
+    fontFamily: "OpenSans",
   },
   num: {
     fontSize: 15,
     color: "#737373",
+    fontFamily: "OpenSans",
   },
   actions: {
     flexDirection: "row",
@@ -67,5 +69,6 @@ const styles = StyleSheet.create({
   des: {
     color: Colors.secondary,
     fontWeight: "500",
+    fontFamily: "OpenSans",
   },
 });

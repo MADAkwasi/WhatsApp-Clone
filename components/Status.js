@@ -24,9 +24,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     marginTop: 5,
     fontWeight: "500",
+    fontFamily: "OpenSans",
   },
   date: {
     fontSize: 13,
     paddingHorizontal: 10,
+    fontFamily: "OpenSans",
   },
 });

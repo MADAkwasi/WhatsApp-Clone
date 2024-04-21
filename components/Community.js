@@ -20,6 +20,8 @@ function Community({ data, onPress }) {
         onPress={onPress}
         announcements={data.announcements}
         groups={data.joinedGroups}
+        community={data.community}
+        image={data.image}
         availableGroups={data.availableGroups}
       />
     </View>
@@ -47,5 +49,6 @@ const styles = StyleSheet.create({
   },
   txt: {
     fontSize: 18,
+    fontFamily: "OpenSans",
   },
 });

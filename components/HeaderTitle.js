@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     color: Colors.background,
     fontSize: 20,
     width: 150,
+    fontFamily: "OpenSans",
   },
   img: {
     height: 40,

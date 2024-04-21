@@ -37,5 +37,6 @@ const styles = StyleSheet.create({
     color: "#737373",
     paddingHorizontal: 12,
     fontSize: 15,
+    fontFamily: "OpenSans",
   },
 });

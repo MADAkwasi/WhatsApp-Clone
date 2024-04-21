@@ -38,9 +38,11 @@ const styles = StyleSheet.create({
   },
   des: {
     fontSize: 18,
+    fontFamily: "OpenSans",
   },
   det: {
     color: "#737373",
     fontSize: 15,
+    fontFamily: "OpenSans",
   },
 });

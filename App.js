@@ -69,10 +69,17 @@ export default function App() {
               animation: "slide_from_right",
               animationTypeForReplace: "push",
               headerBackVisible: true,
-              tabBarStyle: { backgroundColor: "red" },
             }}
           />
-          <Stack.Screen name="Community Info" component={CommunityInfo} />
+          <Stack.Screen
+            name="Community Info"
+            component={CommunityInfo}
+            options={{
+              animation: "slide_from_right",
+              animationTypeForReplace: "push",
+              headerBackVisible: true,
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>

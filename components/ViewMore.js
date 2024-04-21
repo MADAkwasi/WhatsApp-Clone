@@ -1,9 +1,9 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
-function ViewMore(onPress) {
+function ViewMore({ onPress }) {
   return (
-    <Pressable onPress={onPress}>
+    <Pressable onPress={onPress} android_ripple={{ color: "#ddd" }}>
       <View style={styles.row}>
         <AntDesign name="right" size={22} color="#737373" />
         <Text style={styles.txt}>View all</Text>
@@ -28,5 +28,6 @@ const styles = StyleSheet.create({
   txt: {
     fontSize: 17,
     color: "#737373",
+    fontFamily: "OpenSans",
   },
 });

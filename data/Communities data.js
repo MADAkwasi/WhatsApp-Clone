@@ -106,6 +106,38 @@ export const COMMUNITIES = [
         "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
       time: "12:11 PM",
     },
+    availableGroups: [
+      {
+        id: 1,
+        name: "Stanton, Connelly and Will",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3KLsKw0jLKi6EOWlMs2QnOvqlopxW-8i54w&s",
+      },
+      {
+        id: 2,
+        name: "Price and Sons",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2JFyVMUGB2hCmAhFXOdCydqzgsCHd2BAzEA&s",
+      },
+      {
+        id: 3,
+        name: "McLaughlin Group",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8j1phplfUkt-F1EAB3ieH1liY7MD_GvOg3Q&s",
+      },
+      {
+        id: 4,
+        name: "Torp-Beier",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXF9PPUtZi0nt98vbPsRivyJmqNoyZJzHADg&s",
+      },
+      {
+        id: 5,
+        name: "Bahringer-Hayes",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKcqrXE6HREctXF4rWCPDXAXH9novSxFdeLg&s",
+      },
+    ],
     joinedGroups: [
       {
         id: "c94e81ec-9f82-496c-9280-9c0394f26645",
@@ -160,6 +192,50 @@ export const COMMUNITIES = [
       message: "Cras pellentesque volutpat dui.",
       time: "10:57 AM",
     },
+    availableGroups: [
+      {
+        id: 1,
+        name: "Kovacek LLC",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNNl92qNwzhP_M2qyyq78DG2GPMokRD1WfmA&s",
+      },
+      {
+        id: 2,
+        name: "Bogisich, Cruickshank and Bartoletti",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4CStJIyQwWkWKcs6mvYl3hUPNvKErgCuWEw&s",
+      },
+      {
+        id: 3,
+        name: "Ratke LLC",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Tt-ee46zdbpkPkCx73rseKa2wu7ZcwjfAA&s",
+      },
+      {
+        id: 4,
+        name: "Jakubowski-Marvin",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd58judYx225Niz5uRBaJc1UJi4DFHjOZNJA&s",
+      },
+      {
+        id: 5,
+        name: "Douglas-Abbott",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxVzkOBYJ0zwXh6l1j9k6v5TDwLZDUbWjUbQ&s",
+      },
+      {
+        id: 6,
+        name: "Howe, Considine and Schulist",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy1uZTBlxjOfVEiZsIt9FSo_bkxgEb6_OslQ&s",
+      },
+      {
+        id: 7,
+        name: "Heathcote and Sons",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PETXe5dLZODtdN9AUafllEpnmUORAitGbg&s",
+      },
+    ],
     joinedGroups: [
       {
         id: "86818c77-9913-43f3-a9ab-e28db7659293",
@@ -185,6 +261,26 @@ export const COMMUNITIES = [
         "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.",
       time: "3:04 AM",
     },
+    availableGroups: [
+      {
+        id: 1,
+        name: "Pacocha LLC",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3s7hQNmxAIvLw8RIeJ4RQ5Gdgy3w9mzdNWQ&s",
+      },
+      {
+        id: 2,
+        name: "Braun and Sons",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFU7U2h0umyF0P6E_yhTX45sGgPEQAbGaJ4g&s",
+      },
+      {
+        id: 3,
+        name: "Gerhold, O'Reilly and Okuneva",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlJ2u482NBtw501OOICaZxGrIcxNtG5SuqWQ&s",
+      },
+    ],
     joinedGroups: [
       {
         id: "80286595-ce90-47ec-a4e1-7619874a83e7",
@@ -220,6 +316,56 @@ export const COMMUNITIES = [
         "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
       time: "11:55 PM",
     },
+    availableGroups: [
+      {
+        id: 1,
+        name: "Jenkins LLC",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1ks7pQoawVKtUfS9LfpunISIkwpJ4Xzp0pg&s",
+      },
+      {
+        id: 2,
+        name: "Pagac, Watsica and Spencer",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7qAsIK1KYOG-aBuHXU3jjmt-fhj64QdQsNQ&s",
+      },
+      {
+        id: 3,
+        name: "Donnelly, Zboncak and Quitzon",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaDcD1Kgsz9uyl3-u6sXZsIFn7ugLXL9cmWw&s",
+      },
+      {
+        id: 4,
+        name: "Hyatt, Russel and Prohaska",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTufTC6mDEMp7zh4lgLIOFGTQnp4qjswpH6w&s",
+      },
+      {
+        id: 5,
+        name: "Jacobson, Spinka and Lebsack",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Wjd-Cak78mooEfHTx64D7xhFtgBMZRFiiQ&s",
+      },
+      {
+        id: 6,
+        name: "Cremin, Hirthe and Fadel",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxuKrK98QzLT7lTHvqBKiw0AezOVX-Xf2qjw&s",
+      },
+      {
+        id: 7,
+        name: "Macejkovic, McLaughlin and Prosacco",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxlT_-PpQJbt3DsWOZDQYohRy4YF8ck1n8PA&s",
+      },
+      {
+        id: 8,
+        name: "Wuckert LLC",
+        groupIcon:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO2S4wpxmC2w_YGP0lXoQCgzKIazOUBWFGEA&s",
+      },
+    ],
     joinedGroups: [
       {
         id: "9841cc22-fa0f-4b0d-a725-2f8d0b22227d",
